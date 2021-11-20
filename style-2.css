@@ -1,0 +1,551 @@
+:root {
+    --blue: #1e90ff;
+    --white: #d1d1d1;
+    --borderColor: #000;
+    --shadowWhite: linear-gradient(to left top, #d6d4d4 0%, #d1d1d1 50%, #363434 100%);
+  }
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(#1e90ff,#6acf77,#35c448);
+      /* position: relative; */
+  }
+  .container{
+    position: relative;
+    width: 1367px;
+    min-width: 1360px;
+    height: 645px;
+  }
+  .content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+       
+  }
+  .carpet{
+      position: absolute;
+      z-index: 0;
+      top:68%;
+      width:70%;
+      height:22%;
+      background-color: #88ccac;
+      transform: perspective(10px) rotateX(3deg);
+      border: 24px solid #2c8838;
+  }
+  .borderBack{
+      position: absolute;
+      top:60%;
+      width:50%;
+      border-bottom:1px solid #2c8838;
+      
+  }
+  .borderFront{
+      position: absolute;
+      bottom:5%;
+      left:7%;
+      width:88%;
+      border-bottom:30px solid #2c8838;
+      transform: perspective(10px) rotateX(1deg);
+  }
+  .borderLeft{
+      position: absolute;
+      left:15%;
+      bottom:5%;
+      height:35%;
+      border-left:30px solid #2c8838;
+      transform: skew(-50deg);
+  }
+  .borderRight{    
+      position: absolute;
+      left:85%;
+      bottom:5%;
+      height:35%;
+      border-right:30px solid #2c8838;
+      transform: skew(50deg);
+  }
+  .center{
+      position: absolute;
+      top: 40%;
+      width: 200px;
+      height: 300px;
+      border: 1px solid var(--borderColor);
+      background-color: var(--white);
+      -webkit-box-reflect: below 63px linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.6));
+  }
+  .left{
+      position: absolute;
+      top: 40%;
+      left: 35.4%;
+      width: 100px;
+      height: 300px;
+      border: 1px solid var(--borderColor);
+      background-color: var(--white);
+  }
+  .leftSec{
+      position: absolute;
+      top: 38.5%;
+      left: 31.2%;
+      width: 60px;
+      height: 300px;
+      border: 1px solid var(--borderColor);
+      background-color: var(--white);
+      transform: skewY(18deg);
+  }
+  
+  .right{
+      position: absolute;
+      top: 40%;
+      left: 57.2%;
+      width: 100px;
+      height: 300px;
+      border: 1px solid var(--borderColor);
+      background-color: var(--white);
+  }
+  .rightSec{
+      position: absolute;
+      top: 38.5%;
+      left: 64.4%;
+      width: 60px;
+      height: 300px;
+      border: 1px solid var(--borderColor);
+      background-color: var(--white);
+      transform: skewY(-18deg);
+  }
+  .domCenter{
+      position: absolute;
+      top: 13%;
+      width:200px;
+      height: 180px;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      /* border-top-left-radius: 80% ;
+      border-top-right-radius: 80% ; */
+      border-bottom-left-radius: 0% ;
+      border-bottom-right-radius: 0% ;
+      background-color: var(--white);
+  }
+  
+  .domLeft{
+      position: absolute;
+      top: 25%;
+      left:36.8%;
+      width:80px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      border-bottom-left-radius: 0% ;
+      border-bottom-right-radius: 0% ;
+      background-color: var(--white);
+  }
+  .domLBox{
+      position: absolute;
+      top: 32.4%;
+      left: 36.8%;
+      width: 80px;
+      height: 50px;
+      border: 1px solid var(--borderColor);
+      background: var(--white);
+  }
+  .domLBWin1,.domLBWin2,.domLBWin3,
+  .domRBWin1,.domRBWin2,.domRBWin3,
+  .tlbTSWin1,.tlbTSWin2,.tlbTSWin3,
+  .tlfTSWin1,.tlfTSWin2,.tlfTSWin3,
+  .trbTSWin1,.trbTSWin2,.trbTSWin3,
+  .trfTSWin1,.trfTSWin2,.trfTSWin3
+  {
+      position: absolute;
+      top: 22%;
+      left: 36.8%;
+      width: 20px;
+      height: 40px;
+      border: 1px solid var(--borderColor);
+      background: var(--shadowWhite);
+      border-top-left-radius: 70%;
+      border-top-right-radius: 70%;
+  }
+  .domLBWin2,.domRBWin2{
+      left: 5%;
+      top: 20%;
+      transform: skewY(15deg);
+      width: 18px;
+      height: 40px;
+      border-bottom-color: transparent;
+  }
+  .domLBWin3,.domRBWin3{
+      left: 71%;
+      top: 20%;
+      transform: skewY(-15deg);
+      width: 18px;
+      height: 40px;
+      border-bottom-color: transparent;
+  }
+  .tlbTSWin1,.tlfTSWin1,.trbTSWin1,.trfTSWin1 {
+      top: 0% !important;
+      left: 10% !important;
+      width: 11px !important;
+      height: 21px !important;
+  }
+  .tlbTSWin2,.tlfTSWin2,.trbTSWin2,.trfTSWin2{
+      top: 0% !important;
+      left: 40% !important;
+      width: 11px !important;
+      height: 21px !important;
+  }
+  .tlbTSWin3,.tlfTSWin3,.trbTSWin3,.trfTSWin3{
+      top: 0% !important;
+      left: 70% !important;
+      width: 11px !important;
+      height: 21px !important;
+  } 
+  .domRight{
+      position: absolute;
+      top: 25%;
+      left:57.3%;
+      width:80px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      border-bottom-left-radius: 0% ;
+      border-bottom-right-radius: 0% ;
+      background-color: var(--white);
+  }
+  .domRBox{
+      position: absolute;
+      top: 32.4%;
+      left: 57.3%;
+      width: 80px;
+      height: 50px;
+      border: 1px solid var(--borderColor);
+      background: var(--white);
+  }
+  
+  .domCenterStick{
+      position: absolute;
+      top: 8.5%;
+      height: 30px;
+      border:0.01em solid var(--borderColor);
+  }
+  .mainDoor{
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      width:150px;
+      height: 235px;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      border-bottom-left-radius: 0% ;
+      border-bottom-right-radius: 0% ;
+      background: var(--shadowWhite);
+      -webkit-box-reflect: below 63px linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.6));
+  }
+  .winLeftTop,.winLeftTopSec{
+      position: absolute;
+      top: 48%;
+      left:36.8%;
+      width:65px;
+      height: 70px;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      border-bottom-left-radius: 0% ;
+      border-bottom-right-radius: 0% ;
+      background: var(--shadowWhite);
+  }
+  .winLeftTopSec{
+      top: 47.5%;
+      left:31.8%;
+      width:40px;
+      height:65px;
+      transform: skewY(18deg);
+  }
+  .winLeftBottom,.winLeftBottomSec{    
+      position: absolute;
+      top: 68%;
+      left:36.8%;
+      width:65px;
+      height: 70px;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      border-bottom-left-radius: 0% ;
+      border-bottom-right-radius: 0% ;
+      background: var(--shadowWhite);
+  }
+  .winLeftBottomSec{
+      top: 67.5%;
+      left:31.8%;
+      width:40px;
+      height:65px;
+      transform: skewY(18deg);
+  }
+  
+  .winRightTop,.winRightTopSec{    
+      position: absolute;
+      top: 48%;
+      left:58.5%;
+      width:65px;
+      height: 70px;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      border-bottom-left-radius: 0% ;
+      border-bottom-right-radius: 0% ;
+      background: var(--shadowWhite);
+  
+  }
+  .winRightTopSec{
+      top: 47%;
+      left:65.2%;
+      width:40px;
+      height:65px;
+      transform: skewY(-18deg);
+  }
+  .winRightBottom,.winRightBottomSec{
+      position: absolute;
+      top: 68%;
+      left:58.5%;
+      width:65px;
+      height: 70px;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      border-bottom-left-radius: 0% ;
+      border-bottom-right-radius: 0% ;
+      background: var(--shadowWhite);
+  }
+  .winRightBottomSec{
+      top: 67%;
+      left:65.2%;
+      width:40px;
+      height:65px;
+      transform: skewY(-18deg);
+  }
+  
+  .towLeftBack{
+      position: absolute;
+      top: 30%;
+      left: 25%;
+      width: 50px;
+      height: 300px;
+      border: 1px solid var(--borderColor);
+      background-color: var(--white);
+  }
+  .tlbWin1,.tlbWin2,.tlbWin3{
+      position: absolute;
+      left:-13%;
+      width:60px;
+      height: 3px;
+      border: 0.1px solid var(--borderColor);
+  }
+  .tlbWin1{ top: 20%;}
+  .tlbWin2{ top: 53%;}
+  .tlbWin3{ top: 85%;}
+  .tlbTopStick{
+      position: absolute;
+      top: 27%;
+      left: 25.3%;
+      width: 43px;
+      height: 20px;
+      border-left:1px solid var(--borderColor);
+      border-right:1px solid var(--borderColor);
+      background-color: var(--white);
+  }
+  .tlbTopCover{
+      position: absolute;
+      top: 26.4%;
+      left:25.1%;
+      width:49px;
+      height: 3px;
+      border: 0.1px solid var(--borderColor);
+  }
+  .tlbTopTomb{
+      position: absolute;
+      top: 23%;
+      left:25.4%;
+      width:42px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      border-bottom-left-radius: 0% ;
+      border-bottom-right-radius: 0% ;
+      background-color: var(--white);
+  }
+  /*  */
+  .towLeftFront{
+      position: absolute;
+      top: 40%;
+      left: 15%;
+      width: 50px;
+      height: 300px;
+      border: 1px solid var(--borderColor);
+      background-color: var(--white);
+  }
+  .tlfWin1,.tlfWin2,.tlfWin3{
+      position: absolute;
+      left:-13%;
+      width:60px;
+      height: 3px;
+      border: 0.1px solid var(--borderColor);
+  }
+  .tlfWin1{ top: 20%;}
+  .tlfWin2{ top: 53%;}
+  .tlfWin3{ top: 85%;}
+  .tlfTopStick{
+      position: absolute;
+      top: 37%;
+      left: 15.3%;
+      width: 43px;
+      height: 20px;
+      border-left:1px solid var(--borderColor);
+      border-right:1px solid var(--borderColor);
+      background-color: var(--white);
+  }
+  .tlfTopCover{
+      position: absolute;
+      top: 36.5%;
+      left:15.1%;
+      width:48px;
+      height: 3px;
+      border: 0.1px solid var(--borderColor);
+  }
+  .tlfTopTomb{
+      position: absolute;
+      top: 33%;
+      left:15.3%;
+      width:42px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      border-bottom-left-radius: 0% ;
+      border-bottom-right-radius: 0% ;
+      background-color: var(--white);
+  }
+  /*  */
+  .towRightBack{
+      position: absolute;
+      top: 30%;
+      left: 71%;
+      width: 50px;
+      height: 300px;
+      border: 1px solid var(--borderColor);
+      background-color: var(--white);
+  }
+  .trbWin1,.trbWin2,.trbWin3{
+      position: absolute;
+      left:-13%;
+      width:60px;
+      height: 3px;
+      border: 0.1px solid var(--borderColor);
+  }
+  .trbWin1{ top: 20%;}
+  .trbWin2{ top: 53%;}
+  .trbWin3{ top: 85%;}
+  .trbTopStick{
+      position: absolute;
+      top: 27%;
+      left: 71.3%;
+      width: 43px;
+      height: 20px;
+      border-left:1px solid var(--borderColor);
+      border-right:1px solid var(--borderColor);
+      background-color: var(--white);
+  }
+  .trbTopCover{
+      position: absolute;
+      top: 26.4%;
+      left:71.1%;
+      width:49px;
+      height: 3px;
+      border: 0.1px solid var(--borderColor);
+  }
+  .trbTopTomb{
+      position: absolute;
+      top: 23%;
+      left:71.4%;
+      width:42px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      border-bottom-left-radius: 0% ;
+      border-bottom-right-radius: 0% ;
+      background-color: var(--white);
+  }
+  /*  */
+  .towRightFront{
+      position: absolute;
+      top: 40%;
+      left: 81%;
+      width: 50px;
+      height: 300px;
+      border: 1px solid var(--borderColor);
+      background-color: var(--white);
+  }
+  .trfWin1,.trfWin2,.trfWin3{
+      position: absolute;
+      left:-13%;
+      width:60px;
+      height: 3px;
+      border: 0.1px solid var(--borderColor);
+  }
+  .trfWin1{ top: 20%;}
+  .trfWin2{ top: 53%;}
+  .trfWin3{ top: 85%;}
+  .trfTopStick{
+      position: absolute;
+      top: 37%;
+      left: 81.2%;
+      width: 43px;
+      height: 20px;
+      border-left:1px solid var(--borderColor);
+      border-right:1px solid var(--borderColor);
+      background-color: var(--white);
+  }
+  .trfTopCover{
+      position: absolute;
+      top: 36.5%;
+      left:81%;
+      width:49px;
+      height: 3px;
+      border: 0.1px solid var(--borderColor);
+  }
+  .trfTopTomb{
+      position: absolute;
+      top: 33%;
+      left:81.2%;
+      width:43px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      border-bottom-left-radius: 0% ;
+      border-bottom-right-radius: 0% ;
+      background-color: var(--white);
+  }
+  /*  */
+  .tlbTSStick,.tlfTSStick,.trbTSStick,.trfTSStick,.domRBStick,.domLBStick {
+      position: absolute;
+      height: 15px;
+      width: 2px;
+      left: 46%;
+      top: -207%;
+      border: 1px solid var(--borderColor);
+      z-index: 10;
+  }
+  .domRBStick,.domLBStick {
+      left: 48%;
+      top: -136%;
+  }
+  .pool{
+      position: absolute;
+      z-index: -1;
+      top:88%;
+      width:30%;
+      height:20%;
+      background-color: #88ccac;
+      transform: perspective(10px) rotateX(3deg);
+      border-left: 55px solid #1d7e50;
+      border-right: 55px solid #1d7e50;
+  }
+  
